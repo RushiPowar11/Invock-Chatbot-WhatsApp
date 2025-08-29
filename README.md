@@ -28,11 +28,6 @@ A FastAPI-powered WhatsApp chatbot that handles inventory queries, collects lead
 git clone <your-repo>
 cd invock-whatsapp-bot
 
-# Create virtual environment
-python -m venv .venv
-.venv\Scripts\activate  # Windows
-# source .venv/bin/activate  # Linux/Mac
-
 # Install dependencies
 pip install -r requirements.txt
 ```
@@ -56,8 +51,6 @@ GOOGLE_APPLICATION_CREDENTIALS=C:\path\to\credentials.json
 # AI
 GEMINI_API_KEY=your_gemini_key
 
-# Public URL (for webhooks)
-PUBLIC_BASE_URL=https://your-domain.com
 ```
 
 ### 4. Database Setup
@@ -77,12 +70,6 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 streamlit run streamlit_app.py
 ```
 
-### 6. Expose for Webhooks
-```bash
-# Using ngrok (for development)
-ngrok http 8000
-
-# Note the HTTPS URL (e.g., https://abc123.ngrok.io)
 ```
 
 ### 7. Configure WhatsApp Webhook
@@ -266,7 +253,3 @@ For issues:
 2. Verify environment variables
 3. Test individual components
 4. Check API documentation links
-
----
-
-**Note**: This is a prototype. For production use, add proper error handling, logging, monitoring, and security measures.
